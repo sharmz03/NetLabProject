@@ -8,11 +8,11 @@ SERVER_HOST = ''
 
 SERVER_PORT = 54321
 BACKLOG = 5
-CLIENT_TIMEOUT = 10          # seconds to wait for a silent client
+CLIENT_TIMEOUT = 100         # seconds to wait for a silent client
 
 serv_sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 serv_sock.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
-serv_sock.bind((SERVER_HOST, SERVER_PORT))
+#serv_sock.bind((SERVER_HOST, SERVER_PORT))
 serv_sock.listen(BACKLOG)
 print('Server waiting for a connection request on port', SERVER_PORT, '... (Ctrl+C to stop)')
 
